@@ -22,4 +22,7 @@ public interface TaskRepository extends MongoRepository<Task,String> {
 
     @Query("{ severity : { $gt : 2}}")
     List<Task> usingQueryAnnotation(int severity);
+
+    List<Task> findByTaskHistoryAssignedTo(String assignedTo);
+//    same to be achived if by query { "taskHistory.assignedTo" : "Anshika"}
 }

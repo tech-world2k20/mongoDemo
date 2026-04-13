@@ -40,6 +40,11 @@ public class TaskController {
         return service.getTaskBySeverityGreaterThan(severity);
     }
 
+    @GetMapping("/getTaskAssignedTo/{assignedTo}")
+    public List<Task> getTaskByAssignedTo(@PathVariable String assignedTo){
+        return service.getTaskByAssignedTo(assignedTo);
+    }
+
     @GetMapping("/{taskId}")
     public Task getTask(@PathVariable String taskId){
         return service.getTaskByTaskId(taskId);

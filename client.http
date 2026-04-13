@@ -12,3 +12,6 @@ GET http://localhost:8080/tasks/desc/2
 
 ### get tasks with severity orderby modifiedAt desc
 GET http://localhost:8080/tasks/severityMoreThan/2
+
+### get task with assignedTo field which is in taskHistory under Task
+GET http://localhost:8080/tasks/getTaskAssignedTo/Anshika

@@ -62,4 +62,8 @@ public class TaskService {
 //        same logic using query annotation
         return repository.usingQueryAnnotation(severity);
     }
+
+    public List<Task> getTaskByAssignedTo(String assignedTo) {
+        return repository.findByTaskHistoryAssignedTo(assignedTo);
+    }
 }

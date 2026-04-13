@@ -31,4 +31,6 @@ public class Task {
 
     @LastModifiedDate
     private LocalDateTime modifiedAt;
+
+    private TaskHistory taskHistory;
 }
