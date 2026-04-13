@@ -19,7 +19,6 @@ public interface TaskRepository extends MongoRepository<Task,String> {
 
 //    List<Task> findBySeverityGreaterThan(int severity);
 
-
     @Query("{ severity : { $gt : 2}}")
     List<Task> usingQueryAnnotation(int severity);
 
