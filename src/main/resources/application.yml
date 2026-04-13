@@ -8,3 +8,7 @@ spring:
   mongodb:
     connection-timeout: 5000
     socket-timeout: 5000
+
+logging.level:
+    org.springframework.data.mongodb:
+      core.MongoTemplate: DEBUG
