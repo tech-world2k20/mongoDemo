@@ -1,0 +1,14 @@
+### Get all tasks
+GET http://localhost:8080/tasks
+
+
+### get tasks with severity and asignee
+GET http://localhost:8080/tasks/2/Abhishek_kumar
+
+
+### get tasks with severity orderby modifiedAt desc
+GET http://localhost:8080/tasks/desc/2
+
+
+### get tasks with severity orderby modifiedAt desc
+GET http://localhost:8080/tasks/severityMoreThan/2

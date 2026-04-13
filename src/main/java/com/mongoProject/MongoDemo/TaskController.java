@@ -24,6 +24,21 @@ public class TaskController {
         return service.findAllTasks();
     }
 
+    @GetMapping("/{severity}/{asignee}")
+    public List<Task> getTaskBySeverityAndAssignee(@PathVariable int severity, @PathVariable String asignee){
+        return service.getTaskBySeverityAndAssignee(severity, asignee);
+    }
+
+    @GetMapping("/desc/{severity}")
+    public List<Task> getTaskBySeverityInDescModifiedAt(@PathVariable int severity){
+        return service.getTaskBySeverityInDescModifiedAt(severity);
+    }
+
+
+    @GetMapping("/severityMoreThan/{severity}")
+    public List<Task> getTaskBySeverityGreaterThan(@PathVariable int severity){
+        return service.getTaskBySeverityGreaterThan(severity);
+    }
 
     @GetMapping("/{taskId}")
     public Task getTask(@PathVariable String taskId){

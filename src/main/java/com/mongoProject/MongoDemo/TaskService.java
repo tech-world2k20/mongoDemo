@@ -17,6 +17,10 @@ public class TaskService {
         return repository.save(task);
     }
 
+    public List<Task> getTaskBySeverityAndAssignee(int severity, String assignee ){
+        return repository.findBySeverityAndAssignee(severity, assignee);
+    }
+
     public List<Task> findAllTasks() {
         return repository.findAll();
     }
@@ -46,5 +50,16 @@ public class TaskService {
     public String deleteTask(String taskId){
         repository.deleteById(taskId);
         return taskId+" task deleted from dashboard ";
+    }
+
+    public List<Task> getTaskBySeverityInDescModifiedAt(int severity) {
+        return repository.findBySeverityOrderByModifiedAtDesc(severity);
+    }
+
+    public List<Task> getTaskBySeverityGreaterThan(int severity) {
+//        return repository.findBySeverityGreaterThan(severity);
+
+//        same logic using query annotation
+        return repository.usingQueryAnnotation(severity);
     }
 }
