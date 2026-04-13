@@ -1,0 +1,10 @@
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:admin@localhost:27017/tasks?authSource=admin
+      auto-index-creation: true
+
+  mongodb:
+    connection-timeout: 5000
+    socket-timeout: 5000
